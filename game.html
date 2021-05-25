@@ -11,14 +11,37 @@
                 let comGuess = Math.floor(Math.random()*3);
                 console.log(comGuess);
                 if (comGuess == 0){
-                    console.log("Rock");
+                    console.log ("Rock");
                 }else if (comGuess == 1){
-                        console.log("Paper");
+                    console.log ("Paper");
                 }else{
-                console.log("Scissors");
+                    console.log ("Scissors");
                 }   
             }
-            computerPlay();
+     0       function singleround(playerSelection, computerSelection){
+                if (playerSelection == computerSelection){
+                    console.log ("tie");
+                }else if (playerSelection == "Rock" &&computerSelection=="Paper"){
+                    console.log ("lose");
+                }else if (playerSelection == "Rock" &&computerSelection=="Scissors"){
+                    console.log ("win");
+                }else if (playerSelection == "Rock" &&computerSelection=="Paper"){
+                    console.log ("lose");
+                }else if (playerSelection == "Paper" &&computerSelection=="Scissors"){
+                    console.log ("lose");
+                }else if (playerSelection == "Paper" &&computerSelection=="Paper"){
+                    console.log ("tie");
+                }else if (playerSelection == "Paper" &&computerSelection=="Rock"){
+                    console.log ("win");
+                }else if (playerSelection == "Scissors" &&computerSelection=="Rock"){
+                    console.log ("lose");
+                }else if (playerSelection == "Scissors" &&computerSelection=="Paper"){
+                    console.log ("win");
+                }else if (playerSelection == "Scissors" &&computerSelection=="Scissors"){
+                    console.log ("tie");
+                }
+            }
+            singleround("rock","rock");          
     </script>
 </body>
 </html>
